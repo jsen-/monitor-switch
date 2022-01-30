@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'monitor-switch'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=monitor-switch",
+                    "--package=monitor-switch"
+                ],
+                "filter": {
+                    "name": "monitor-switch",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'monitor-switch'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=monitor-switch",
+                    "--package=monitor-switch"
+                ],
+                "filter": {
+                    "name": "monitor-switch",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

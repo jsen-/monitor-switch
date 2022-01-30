@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "presentation": {
+        "clear": true,
+    },
+    "type": "shell",
+    "tasks": [
+        {
+            "label": "run",
+            "command": "cargo run",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build",
+            "command": "cargo check",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+    ]
+}

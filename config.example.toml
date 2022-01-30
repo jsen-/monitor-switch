@@ -1,0 +1,79 @@
+[profile.single]
+# you can list available sinks with `pactl list short sinks`
+pulseaudio-sink = "alsa_output.usb-SteelSeries_Arctis_Pro_Wireless-00.iec958-stereo"
+# this is the desired contents of `~/.config/monitors.xml` it's updated by gnome's Displays utility
+monitors ="""<monitors version="2">
+  <configuration>
+    <logicalmonitor>
+      <x>0</x>
+      <y>0</y>
+      <scale>1</scale>
+      <primary>yes</primary>
+      <monitor>
+        <monitorspec>
+          <connector>DisplayPort-1</connector>
+          <vendor>BNQ</vendor>
+          <product>BenQ BL2710</product>
+          <serial>MBD02735SL0</serial>
+        </monitorspec>
+        <mode>
+          <width>2560</width>
+          <height>1440</height>
+          <rate>59.950550079345703</rate>
+        </mode>
+      </monitor>
+    </logicalmonitor>
+    <disabled>
+      <monitorspec>
+        <connector>HDMI-0</connector>
+        <vendor>SAM</vendor>
+        <product>SAMSUNG</product>
+        <serial>0x01000e00</serial>
+      </monitorspec>
+    </disabled>
+  </configuration>
+</monitors>"""
+
+[profile.multi]
+pulseaudio-sink = "alsa_output.pci-0000_00_1b.0.iec958-stereo"
+monitors ="""<monitors version="2">
+  <configuration>
+    <logicalmonitor>
+      <x>3840</x>
+      <y>0</y>
+      <scale>1</scale>
+      <primary>yes</primary>
+      <monitor>
+        <monitorspec>
+          <connector>DisplayPort-1</connector>
+          <vendor>BNQ</vendor>
+          <product>BenQ BL2710</product>
+          <serial>MBD02735SL0</serial>
+        </monitorspec>
+        <mode>
+          <width>2560</width>
+          <height>1440</height>
+          <rate>59.950550079345703</rate>
+        </mode>
+      </monitor>
+    </logicalmonitor>
+    <logicalmonitor>
+      <x>0</x>
+      <y>0</y>
+      <scale>1</scale>
+      <monitor>
+        <monitorspec>
+          <connector>HDMI-0</connector>
+          <vendor>SAM</vendor>
+          <product>SAMSUNG</product>
+          <serial>0x01000e00</serial>
+        </monitorspec>
+        <mode>
+          <width>3840</width>
+          <height>2160</height>
+          <rate>30</rate>
+        </mode>
+      </monitor>
+    </logicalmonitor>
+  </configuration>
+</monitors>"""
